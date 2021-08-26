@@ -175,6 +175,7 @@ function getNextPalindromeDate(date)
 var dateInputRef = document.querySelector("#bday-input");
 var showBtnRef   = document.querySelector("#show-btn");
 var resultRef    = document.querySelector('#result');
+// var timeoutID = setTimeout(function clickHandler(){}) tiemout code for loading screen to be added
 
 function clickHandler(e)
 {
@@ -198,7 +199,7 @@ function clickHandler(e)
         else
         {
             var [ctr, nextDate] = getNextPalindromeDate(date);
-            resultRef.innerText = `The nearest palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed by ${ctr} days.`;
+            resultRef.innerText = `The nearest palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${ctr} days.`;
          }
         }
 }
