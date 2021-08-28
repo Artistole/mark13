@@ -170,8 +170,13 @@ function getNextPalindromeDate(date)
    return[ctr, nextDate ];
 
 }
+////
 
 
+
+
+
+///
 var dateInputRef = document.querySelector("#bday-input");
 var showBtnRef   = document.querySelector("#show-btn");
 var resultRef    = document.querySelector('#result');
@@ -199,9 +204,14 @@ function clickHandler(e)
         else
         {
             var [ctr, nextDate] = getNextPalindromeDate(date);
-            resultRef.innerText = `The nearest palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${ctr} days.`;
+            var da = (ctr > 1 ) ? "days" : "day";
+            resultRef.innerText = `Your birthday is not a palindrome. The next nearest palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${ctr} ${da}.`;
          }
         }
+    else
+    {
+        resultRef.innerText = "Select a date first"
+    }
 }
 
 
